@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatProj", "ChatProj\ChatProj.csproj", "{3D54D69F-41E5-42A0-9B1F-9A1388679FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatProj.Tests", "ChatProj.Tests\ChatProj.Tests.csproj", "{A5007001-701B-44C2-BDDC-8607160B50CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A0D501EB-81A6-4F39-945A-0F119DB7A8B7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D54D69F-41E5-42A0-9B1F-9A1388679FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D54D69F-41E5-42A0-9B1F-9A1388679FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D54D69F-41E5-42A0-9B1F-9A1388679FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D54D69F-41E5-42A0-9B1F-9A1388679FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5007001-701B-44C2-BDDC-8607160B50CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5007001-701B-44C2-BDDC-8607160B50CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5007001-701B-44C2-BDDC-8607160B50CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5007001-701B-44C2-BDDC-8607160B50CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

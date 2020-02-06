@@ -1,0 +1,66 @@
+﻿using System;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Collections;
+using ChatProj.Models;
+using Microsoft.AspNet.SignalR;
+using System.Data.Entity;
+using System.Threading.Tasks;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using ChatProj.DAL;
+using ChatProj.Service_Layer;
+using System.Data.Entity.Core.Objects;
+
+namespace SignalRChat
+{   
+    
+    public class ChatHub : Hub
+    {
+        
+        public ChatHub()
+        {
+
+            userService = new UserService();
+        }
+
+        public IUserService userService;
+
+        public MessageContext messageContext = new MessageContext();
+
+
+        public void Send(string message)
+        {
+            
+            var user = Context.User;
+            Clients.All.addNewMessageToPage(user.Identity.Name, message);
+            
+            Message carrier = new Message
+            {
+                Name = Context.User.Identity.Name,
+                MessageString = message,
+                MessageDate = DateTime.Now
+            };
+
+            userService.SaveMessage(carrier);
+            userService.SpamCheckAndReport(Context, Clients);
+            
+            }
+
+        public override async Task OnConnected()
+        {
+            if (userService.IsAdmin(Context))
+            {
+                
+                await Groups.Add(Context.ConnectionId, "admingroup");
+                await Clients.Group("admingroup").addNewMessageToPage("The admin " + Context.User.Identity.Name + " has joined the chat.");
+                
+                {
+                };
+                
+            }
+             
+        }
+    }
+}

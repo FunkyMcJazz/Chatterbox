@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ChatProj;
+using NUnit.Framework;
+using ChatProj.Controllers;
+using Moq;
+using ChatProj.Models;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
+using ChatProj.DAL;
+using FakeDbSet;
+using ChatProj.Service_Layer;
+using System.Threading.Tasks;
+using System.Security.Principal;
+
+namespace ChatProj.Tests
+{
+    [TestFixture]
+    public class UserServiceTests
+    {
+
+
+        [Test]
+        public void IsAdmin_CalledByAdmin_ReturnTrue()
+        {
+            string test = "Continous Integration test3";
+            //Arrange
+            UserService userService = new UserService();
+            var principalMock = new Mock<IPrincipal>();
+            principalMock.Setup(x => x.IsInRole("admin")).Returns(true);
+            var requestMock = new Mock<IRequest>();
+            requestMock.Setup(x => x.User).Returns(principalMock.Object);
+            //Act
+            var result = userService.IsAdmin(new HubCallerContext(requestMock.Object, ""));
+            //Assert
+            Assert.IsTrue(result, "Something is wrong.");
+        }
+
+        [Test]
+        public void IsAdmin_CalledByUser_ReturnFalse()
+        {
+            //Arrange
+            UserService userService = new UserService();
+            var principalMock = new Mock<IPrincipal>();
+            principalMock.Setup(x => x.IsInRole("admin")).Returns(false);
+            var requestMock = new Mock<IRequest>();
+            requestMock.Setup(x => x.User).Returns(principalMock.Object);
+            //Act
+            var result = userService.IsAdmin(new HubCallerContext(requestMock.Object, ""));
+            //Assert
+            Assert.IsFalse(result, "Something is wrong.");
+        }
+
+       
+
+        
+    }
+}

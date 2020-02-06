@@ -1,0 +1,158 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support;
+using OpenQA.Selenium.Support.UI;
+using NUnit.Framework;
+using OpenQA.Selenium.Firefox;
+using System.Threading.Tasks;
+using System.Threading;
+
+namespace ChatProj.Tests
+{
+    [TestFixture]
+    class WebDriverTestClass
+    {
+        /*private IWebDriver _driver;
+        private StringBuilder verificationErrors;
+        private string baseURL;
+        private bool acceptNextAlert = true;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _driver = new FirefoxDriver();
+            baseURL = "http://localhost:59932/";
+            verificationErrors = new StringBuilder();
+        }
+
+        [TearDown]
+        public void TeardownTest()
+        {
+            try
+            {
+                _driver.Quit();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if unable to close the browser
+            }
+            Assert.AreEqual("", verificationErrors.ToString());
+        }
+        [Repeat(2)]
+        [Test]
+        public void TestFirefox()
+        {
+
+            _driver.Navigate().GoToUrl(baseURL + "");
+            
+            IWebElement userNameInput = _driver.FindElement(By.Name("UserName"));
+            userNameInput.SendKeys("Svenneglenne");
+            IWebElement passwordInput = _driver.FindElement(By.Name("Password"));
+            passwordInput.SendKeys("rogertech12");
+            _driver.FindElement(By.CssSelector("input[type=\"submit\"]")).Click();
+
+
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            IWebElement messageBox = wait.Until<IWebElement>((d) =>
+            {
+                return d.FindElement(By.Id("message"));
+            });
+
+            IWebElement adminMessageWaiter = wait.Until<IWebElement>((d) =>
+            {
+                return d.FindElement(By.XPath("//ul[@id='discussion']/li[1]"));
+            });
+           
+
+            System.Console.Out.WriteLine("STUFF");
+            //IWebElement query = driver.FindElement(By.Id("message"));
+            String textSnippet = "This is a selenium test";
+            adminMessageWaiter.SendKeys("");
+
+            messageBox.SendKeys("This is a selenium test");
+
+            IWebElement waitForJava = wait.Until<IWebElement>((d) =>
+            {
+                return d.FindElement(By.XPath("//ul[@id='discussion']/li[1]"));
+            });
+
+            //Thread.Sleep(2000);
+
+            WaitForPageLoad(10);
+
+            _driver.FindElement(By.Id("sendmessage")).Click();
+            //Thread.Sleep(2000);
+
+            _driver.FindElement(By.LinkText("Logg")).Click();
+
+            IWebElement loggWaiter = wait.Until<IWebElement>((d) =>
+            {
+                return d.FindElement(By.XPath("//div[@id='body']/section/table/tbody/tr/td[2]"));
+            });
+            Assert.AreEqual(textSnippet, loggWaiter.Text);
+            
+            _driver.FindElement(By.LinkText("MPM Graph")).Click();
+            Thread.Sleep(2000);
+            
+        }
+
+       public void WaitForPageLoad(int maxWaitTimeInSeconds) 
+       {
+        string state = string.Empty;
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(maxWaitTimeInSeconds));
+
+            //Checks every 500 ms whether predicate returns true if returns exit otherwise keep trying till it returns ture
+            wait.Until(d =>
+            {
+
+                try
+                {
+                    state = ((IJavaScriptExecutor)_driver).ExecuteScript(@"return document.readyState").ToString();
+                }
+                catch (InvalidOperationException)
+                {
+                    //Ignore
+                }
+                catch (NoSuchWindowException)
+                {
+                    //when popup is closed, switch to last windows
+                    _driver.SwitchTo().Window(_driver.WindowHandles.Last());
+                }
+                //In IE7 there are chances we may get state as loaded instead of complete
+                return (state.Equals("complete", StringComparison.InvariantCultureIgnoreCase) || state.Equals("loaded", StringComparison.InvariantCultureIgnoreCase));
+
+            });
+        }
+        catch (TimeoutException)
+        {
+            //sometimes Page remains in Interactive mode and never becomes Complete, then we can still try to access the controls
+            if (!state.Equals("interactive", StringComparison.InvariantCultureIgnoreCase))
+                throw;
+        }
+        catch (NullReferenceException)
+        {
+            //sometimes Page remains in Interactive mode and never becomes Complete, then we can still try to access the controls
+            if (!state.Equals("interactive", StringComparison.InvariantCultureIgnoreCase))
+                throw;
+        }
+        catch (WebDriverException)
+        {
+            if (_driver.WindowHandles.Count == 1)
+            {
+                _driver.SwitchTo().Window(_driver.WindowHandles[0]);
+            }
+            state = ((IJavaScriptExecutor)_driver).ExecuteScript(@"return document.readyState").ToString();
+            if (!(state.Equals("complete", StringComparison.InvariantCultureIgnoreCase) || state.Equals("loaded", StringComparison.InvariantCultureIgnoreCase)))
+                throw;
+        }
+}*/
+  
+
+        
+    }
+}

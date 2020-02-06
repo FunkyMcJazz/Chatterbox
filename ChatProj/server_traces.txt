@@ -1,0 +1,68 @@
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+Microsoft.Owin.Host.SystemWeb.OwinAppContext Information: 0 : No support for WebSockets has been detected.
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : Timeout(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : End(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Verbose: 0 : Cancel(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : Abort(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : End(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Verbose: 0 : Cancel(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(a489c855-1ef0-48c8-aad4-14a056df7c1d)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (a489c855-1ef0-48c8-aad4-14a056df7c1d)
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+Microsoft.Owin.Host.SystemWeb.OwinAppContext Information: 0 : No support for WebSockets has been detected.
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Information: 0 : End(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.HubDispatcher Information: 0 : The groups token is missing
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : Abort(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : End(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Verbose: 0 : Cancel(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Verbose: 0 : DrainWrites(5888ba97-db25-49d9-bddb-dfd00b0ef847)
+SignalR.Transports.LongPollingTransport Information: 0 : CompleteRequest (5888ba97-db25-49d9-bddb-dfd00b0ef847)
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.
+Microsoft.Owin.Host.SystemWeb.OwinHttpModule Warning: 0 : No OWIN entry point was found.

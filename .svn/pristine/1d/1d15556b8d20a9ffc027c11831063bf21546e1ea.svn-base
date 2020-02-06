@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ChatProj;
+using NUnit.Framework;
+using ChatProj.Controllers;
+using Moq;
+using ChatProj.Models;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
+using ChatProj.DAL;
+using ChatProj.Service_Layer;
+using System.Threading.Tasks;
+using FakeDbSet;
+using ChatProj.Controllers;
+using System.Security.Principal;
+
+namespace ChatProj.Tests
+{
+    [TestFixture]
+    class MessageRepositoryTests
+    {
+        [SetUp]
+        public void Setup()
+        {
+            
+        }
+
+        [Test]
+        public void GetMessages_AssertAreEqual_Pass()
+        {
+            //Arrange
+            var mockDataContext = new Mock<IMessageContext>();
+            var mockItemList = new FakeDbSet<Message>
+    {
+        new Message {MessageID = 5000, Name ="Erland", MessageString ="Foo Bar", MessageDate = DateTime.Now},
+        new Message {MessageID = 5001, Name ="Erland", MessageString ="Bar foo", MessageDate = DateTime.Now},
+        new Message {MessageID = 5002, Name ="Erland", MessageString ="Foo Bar", MessageDate = DateTime.Now}
+        
+    };
+            mockDataContext.Setup(m => m.Messages).Returns(mockItemList);
+
+            var principalMock = new Mock<IPrincipal>();
+            principalMock.Setup(x => x.IsInRole("admin")).Returns(false);
+            var requestMock = new Mock<IRequest>();
+            requestMock.Setup(x => x.User).Returns(principalMock.Object);
+
+            int hej = 12;
+
+            var hubCallerContext = new HubCallerContext(requestMock.Object, "");
+            var messageRepository = new MessageRepository(mockDataContext.Object, hubCallerContext);
+            //Act
+            var List = messageRepository.GetMessages();
+            //Assert
+            Assert.AreEqual(3, List.Count());
+        }
+
+        [Test]
+        public void GetMessages_AssertAreNotEqual_Pass()
+        {
+            //Arrange
+            var mockDataContext = new Mock<IMessageContext>();
+            var mockItemList = new FakeDbSet<Message>
+    {
+        new Message {MessageID = 5000, Name ="Erland", MessageString ="Foo Bar", MessageDate = DateTime.Now},
+        new Message {MessageID = 5001, Name ="Erland", MessageString ="Bar foo", MessageDate = DateTime.Now},
+        new Message {MessageID = 5002, Name ="Erland", MessageString ="Foo Bar", MessageDate = DateTime.Now}
+        
+    };
+            mockDataContext.Setup(m => m.Messages).Returns(mockItemList);
+
+            var principalMock = new Mock<IPrincipal>();
+            principalMock.Setup(x => x.IsInRole("admin")).Returns(false);
+            var requestMock = new Mock<IRequest>();
+            requestMock.Setup(x => x.User).Returns(principalMock.Object);
+
+            var hubCallerContext = new HubCallerContext(requestMock.Object, "");
+            var messageRepository = new MessageRepository(mockDataContext.Object, hubCallerContext);
+            //Act
+            var List = messageRepository.GetMessages();
+            //Assert
+            Assert.AreNotEqual(4, List.Count());
+        }
+
+       
+    }
+}
